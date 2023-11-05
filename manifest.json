@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Wykrywacz komunikatów o błędzie",
+  "version": "1.0",
+  "description": "Wykrywa komunikaty o błędzie i tworzy popup z pomocą.",
+  "permissions": ["activeTab", "webNavigation", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ]
+}

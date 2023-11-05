@@ -1,0 +1,74 @@
+.popup {
+  position: fixed;
+  bottom: 150px;
+  right: 100px;
+  background-color: green;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  animation: pulse 3s infinite;
+  max-width: 300px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.popup2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  animation: pulse 3s infinite;
+  max-width: 800px;
+  width: 100%;
+  color: #fff;
+  z-index: 9999;
+  overflow-y: auto;
+  max-height: 90%;
+}
+
+.popup2 p{
+	margin: 10px 0;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transparent-button {
+  background: none;
+  border: 2px solid black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+.popup2 .transparent-button{
+	width: 100%;
+	text-align: center;
+}
+
+.transparent-button:hover {
+  background-color: black;
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
