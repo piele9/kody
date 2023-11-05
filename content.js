@@ -12,11 +12,11 @@ const errors = {
 
 // Funkcja do wyświetlania popupa
 function showPopup(message) {
-	
+
   // Usuń poprzednie popupy, jeśli istnieją
   document.querySelectorAll('.popup, .popup2').forEach(popup => popup.remove());
-  document.querySelectorAll('#windowTopLayer').forEach(element => element.remove());
-  
+  // Usunięcie PopUpu z Ido -> // document.querySelectorAll('#windowTopLayer').forEach(element => element.remove());
+
   const popup = document.createElement('div');
   popup.className = "popup";
   popup.innerHTML = `
@@ -26,9 +26,9 @@ function showPopup(message) {
       <button id="noButton" class="transparent-button">Nie</button>
     </div>
   `;
-  
+
   const popup2 = document.createElement('div');
-  popup2.className = "popup2"; 
+  popup2.className = "popup2";
   popup2.style.display = "none";
   popup2.innerHTML = `
     <p>${message}</p> 
@@ -36,22 +36,22 @@ function showPopup(message) {
       <button id="closeButton" class="transparent-button">Zapoznałem/am się z informacjami</button>
     </div>
   `;
-  
+
   document.body.appendChild(popup);
-  document.body.appendChild(popup2); 
+  document.body.appendChild(popup2);
 
-  document.getElementById('noButton').addEventListener('click', function() {
-    popup.remove(); 
+  document.getElementById('noButton').addEventListener('click', function () {
+    popup.remove();
   });
 
-  document.getElementById('yesButton').addEventListener('click', function() {
+  document.getElementById('yesButton').addEventListener('click', function () {
     popup.remove();
-    popup2.style.display = "block"; 
+    popup2.style.display = "block";
   });
 
-  document.getElementById('closeButton').addEventListener('click', function() {
+  document.getElementById('closeButton').addEventListener('click', function () {
     popup.remove();
-	popup2.remove(); 
+    popup2.remove();
   });
 }
 
