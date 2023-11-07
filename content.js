@@ -6,8 +6,8 @@ document.head.appendChild(link);
 
 // Błędy i ich rozwiązania
 const errors = {
-  "email: required": "<p>Należy w tej sytuacji zweryfikować poprawność adresu e-mail podanego przez sklep w danych adresowych, które są przekazywane jako nadawcze na etykietę - czy adres e-mail jest podany oraz czy domena, podana dla adresu e-mail, jest prawidłowa. Dane nadawcze mogą być pobierane z danych kontaktowych sklepu, domyślnych danych do dokumentów sprzedaży lub z danych magazynu, z którego odbywa się wysyłka zamówienia.</p><p> Sprawdzisz to w konfiguracji kuriera w sekcji: <p><strong> ADMINISTRACJA > Magazyn i logistyka > Konfiguracja kurierów > Polska > InPost > wybierz usługę. </strong></p><p>Dodatkowo, jeśli adres e-mail w danych adresowych jest podany, należy nadpisać zmiany i spróbować wygenerować etykietę w zamówieniu jeszcze raz.</p>",
-  "email: invalid": "Należy w tej sytuacji zweryfikować poprawność adresu e-mail"
+  "email: required": "<p>Wygląda na to, że nie wprowadziłeś adresu email w ustawieniach magazynu, z którego realizowana jest wysyłka.</p><p><strong>Przejdź do ustawień Magazynu M2:</strong></p> <p><a href='https://trening10.iai-shop.com/panel/stocks.php?action=edit&id=2' target='_blank'>[Przejdź]</a>, a następnie uzupełnij w danych kontaktowych pole: adres email.</p>",
+  "email: invalid": "<p>Należy w tej sytuacji zweryfikować poprawność adresu e-mail.</p>"
 };
 
 // Funkcja do wyświetlania popupa
@@ -20,7 +20,7 @@ function showPopup(message) {
   const popup = document.createElement('div');
   popup.className = "popup";
   popup.innerHTML = `
-    <p>Czy pomóc w obsłudze komunikatu?</p>
+    <p>Czy potrzebujesz pomocy z wydrukowaniem etykiety?</p>
     <div class="buttons">
       <button id="yesButton" class="transparent-button">Tak</button>
       <button id="noButton" class="transparent-button">Nie</button>
