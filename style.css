@@ -36,6 +36,11 @@
 	line-height: 25px;
 }
 
+.popup2 a{
+	color: #fff;
+	text-decoration: underline;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
